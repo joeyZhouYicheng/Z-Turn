@@ -10,6 +10,12 @@ keyboard：用大小写切换键来一键切换中英文
 
 ![image-20190729133359328](http://ww4.sinaimg.cn/large/006tNc79gy1g5gnfim6efj30ku064t9z.jpg)
 
+System perference > keyboard > shortcuts > screenshots
+
+![image-20190801100813463](http://ww1.sinaimg.cn/large/006tNc79gy1g5jycdq20nj30no03cq3x.jpg)
+
+截屏默认进入剪切板，而不是变成文件
+
 ### word clock
 
 时钟屏保，可惜升级需要花钱。[下载](https://www.simonheys.com/wordclock/)

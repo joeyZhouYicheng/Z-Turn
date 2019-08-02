@@ -6,6 +6,8 @@
 - Snippet Suggestions： top
   自定义代码片段优先展示
 - autosave：onfocuschange
+- run code: ctrl + r
+  需要安装code runner
 
 ## 快捷键
 
