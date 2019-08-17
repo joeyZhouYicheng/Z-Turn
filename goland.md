@@ -2,40 +2,37 @@
 
 ## 快捷键
 
-运行：ctrl + shift + r
-
-停止：cmd + f2
-
-文件树：cmd+1
-
-运行栏：cmd+4
-
-整个函数上下移动：cmd + shift + up/down
-
-收缩collaspe代码：cmd + -/+
-
-收缩全部代码：cmd + shift + -/+
-
-黏贴记录：cmd + shift + v
-
-
+- 运行：ctrl + shift + r
+- 停止：cmd + f2
+- 文件树：cmd+1
+- 运行栏：cmd+4
+- 整个函数上下移动：cmd + shift + up/down
+- 收缩collaspe代码：cmd + -/+
+- 收缩全部代码：cmd + shift + -/+
+- 黏贴记录：cmd + shift + v
+- 书签：f3
+  数字书签：ctrl + shift + 数字。
+  都可以在cmd+2里面看到
+  数字标签可以 ctrl + 数字，来跳转
+- 开关断点： cmd + f8
+- 查看函数定义：cmd + b
 
 ### 设置
 
 - delete：ctrl + d
 - Backspace: ctrl + h
-- Delete to line end: cmd + k
+- Delete to line end: ctrl + k
 - delete to line start : cmd + backspace
 - add selection for next occurrence : cmd + d
 - Terminal : shift + cmd + k
 - move line up: option + up
 - move line down : option + down
 - Commit ：cmd + shift + r
-- Split vertically: ctrl + shift + cmd + ➡️
+- Split vertically: shift + cmd + ➡️
 - move right: ctrl + cmd + ➡️
 - Unspilt: ctrl + cmd + ⬅️
-
 - Close project: cmd + shift + w
+- Reopen closed tab: shift + cmd + t
 
 
 
@@ -140,4 +137,12 @@
 ![image-20190725102647239](http://ww3.sinaimg.cn/large/006tNc79gy1g5bvji2fl7j30b903pglp.jpg)
 
 为了不让for进入死循环，然后占死协程，进而占死线程。要给别的协程工作的空间。
+
+## goland如何处理冲突
+
+reabse有冲突，可以在Run（cmd + 4）里面的output看到，有哪些文件冲突。
+
+然后进去改就行了
+
+改完可以再在命令行里面重新add并git rebase continue
 

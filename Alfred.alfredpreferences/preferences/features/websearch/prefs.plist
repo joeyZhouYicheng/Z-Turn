@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>B12FD2A1-534C-4752-9B33-5F5203D51934</key>
+		<dict>
+			<key>enabled</key>
+			<false/>
+			<key>keyword</key>
+			<string>git</string>
+			<key>text</key>
+			<string>Search git for '{query}'</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}&amp;amp;ref=opensearch</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>B699F79B-E564-4857-8E3D-164515A96E29</key>
+		<dict>
+			<key>enabled</key>
+			<false/>
+			<key>keyword</key>
+			<string>tb</string>
+			<key>text</key>
+			<string>taobao</string>
+			<key>url</key>
+			<string>http://s.taobao.com/search?oe=utf-8&amp;f=8&amp;q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

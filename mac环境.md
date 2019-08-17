@@ -2,15 +2,19 @@
 
 [参考这篇](https://sourabhbajaj.com/mac-setup/)
 
+## 快捷键
+
+- cmd + ctrl + space = 调出表情
+- Ctrl + cmd + q = 锁屏
+
 ## mac设置
 
-辅助功能》鼠标与触控板》触控板选项》启用拖移
+- 辅助功能》鼠标与触控板》触控板选项》启用拖移
+- Keyboard > shortcuts > mission control
+  Show desktop: false
+  Show dashboard: false
 
-keyboard：用大小写切换键来一键切换中英文
-
-![image-20190729133359328](http://ww4.sinaimg.cn/large/006tNc79gy1g5gnfim6efj30ku064t9z.jpg)
-
-System perference > keyboard > shortcuts > screenshots
+- System perference > keyboard > shortcuts > screenshots
 
 ![image-20190801100813463](http://ww1.sinaimg.cn/large/006tNc79gy1g5jycdq20nj30no03cq3x.jpg)
 
@@ -22,7 +26,28 @@ System perference > keyboard > shortcuts > screenshots
 
 ## 命令行
 
-[Iterm2](https://www.iterm2.com)下载
+### [Iterm2](https://www.iterm2.com)下载
+
+[参考](https://www.yuque.com/codingfanlt/note/iterm2)
+
+- pointer > focus follows mouse
+
+跟随鼠标激活命令行
+
+- 修改全屏快捷键
+
+![image-20190810164316058](http://ww3.sinaimg.cn/large/006tNc79gy1g5uoc5qwjpj30di01e0su.jpg)
+
+- Profiles > keys > 右下角
+
+![image-20190813101647849](http://ww3.sinaimg.cn/large/006tNc79gy1g5xu105krxj30g407yjvn.jpg)
+
+这能让iterm用option来单词移动。
+
+不过删除到行首就变成了是ctrl + u了。
+
+- Command + ;  展示最近键入的命令
+- cmd + shift + h，展示剪切板历史记录
 
 ### homebrew
 
@@ -103,6 +128,8 @@ vi ~/.zshrc
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ![image-20190723114124110](http://ww1.sinaimg.cn/large/006tNc79gy1g59mgj2c0cj30zu036mxh.jpg)
+
+
 
 最后source一下，使其生效。
 
@@ -198,7 +225,15 @@ brew install the fuck
 brew install tree
 ```
 
+### bat
 
+```shell
+brew install bat
+```
+
+[介绍](https://juejin.im/post/5b042c31f265da0b80711510)就是一个比cat更好用的文件查看工具。
+
+可以高亮代码。不过只能查看。
 
 ## golang环境
 
