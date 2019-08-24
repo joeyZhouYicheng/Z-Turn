@@ -16,6 +16,8 @@
   数字标签可以 ctrl + 数字，来跳转
 - 开关断点： cmd + f8
 - 查看函数定义：cmd + b
+- 格式化：option+cmd+L
+- 块选取：shift + cmd + 8
 
 ### 设置
 
