@@ -2,6 +2,8 @@
 
 [参考这篇](https://sourabhbajaj.com/mac-setup/)
 
+[和这篇](https://www.cnblogs.com/kaiye/p/5004364.html)
+
 ## 快捷键
 
 - cmd + ctrl + space = 调出表情
@@ -72,6 +74,22 @@ git config --global user.name "joeyZhouYicheng"
 git config --global user.email "joey.zhouyicheng@gmail.com"
 ```
 
+#### gitignore
+
+每次都要写`.gitignore`很烦，可以在`~`下载[macos的.gitignore](https://github.com/github/gitignore/blob/master/Global/macOS.gitignore)
+
+```shell
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+```
+
+然后自动配置
+
+```shell
+git config --global core.excludesfile ~/.gitignore
+```
+
+
+
 ### vim插件
 
 ```shell
@@ -88,7 +106,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 [参考这篇文章](https://www.jianshu.com/p/9c3439cc3bdb)，装饰一下环境
 
-[zsh主题汇总](https://birdteam.net/131798)
+[zsh主题汇总](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
 
 输入`vim ~/.zshrc`，找到ZSH_THEME来修改主题
 
@@ -139,7 +157,27 @@ source ~/.zshrc
 
 `:wq`保存并退出。
 
-### autojump
+
+
+git查询方法
+
+```shell
+alias | grep git
+```
+
+
+
+### z
+
+在zsh里面的plugin，加入z就行了，效果和autojump差不多
+
+```shell
+z -x 无效路径
+```
+
+
+
+#### autojump
 
 只要去过的文件夹，比如`…/code`，那么输入`j code`就能过去了。[参考](https://www.cnblogs.com/LeeScofiled/p/7860144.html)
 
@@ -148,6 +186,10 @@ brew install autojump
 ```
 
 要在 `.zshrc` 中找到 `plugins=`，在后面添加`autojump`
+
+### [extract](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/extract)
+
+遇到啥压缩文件，都能`x <filename>`来解压
 
 ### powerline
 
@@ -216,7 +258,7 @@ brew install neovim
 打错了命令，fuck一下就能正确了
 
 ```shell
-brew install the fuck
+brew install thefuck
 ```
 
 ### tree

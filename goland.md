@@ -18,6 +18,10 @@
 - 查看函数定义：cmd + b
 - 格式化：option+cmd+L
 - 块选取：shift + cmd + 8
+  这个是选中后一直块选中
+- 块选中：shift+option+鼠标拖动
+  这个是摁了才块选中
+- 该文件内变量全部改：shift+f6
 
 ### 设置
 
@@ -35,6 +39,7 @@
 - Unspilt: ctrl + cmd + ⬅️
 - Close project: cmd + shift + w
 - Reopen closed tab: shift + cmd + t
+-  toggle case: ctrl + cmd + u
 
 
 
@@ -91,6 +96,18 @@
 ### Key promoter X
 
 提示你操作的快捷键
+
+
+
+### tabnine
+
+就是一个很好用的补全插件
+
+
+
+### camelcase
+
+shift+alt+u可以切换驼峰等
 
 ## live templates
 
