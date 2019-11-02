@@ -74,6 +74,9 @@ Plug 'jiangmiao/auto-pairs'
 " 单词加下划线
 Plug 'itchyny/vim-cursorword'
 
+" easylog
+Plug 'joeyZhouYicheng/vim-easylog'
+
 
 " ------------ 语言插件 ------------
 " go
@@ -406,7 +409,7 @@ augroup END
 autocmd! BufWritePost ~/.vimrc :source ~/.vimrc
 
 set helplang=cn
-language messages zh_CN.utf-8
+" language messages zh_CN.utf-8
 
 " 设置主题
 set background=dark
@@ -500,7 +503,7 @@ nnoremap j gj
 nnoremap k gk
 
 let g:mapleader=','
-noremap <leader>so :so %<CR>
+noremap <leader>so :w<cr>:so %<CR>
 noremap <leader>w :w<CR>
 noremap <leader>q :q<CR>
 nnoremap <leader>p "+p
