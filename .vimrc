@@ -12,24 +12,27 @@ Plug 'itchyny/lightline.vim'
 " 增加代码缩进线条
 Plug 'yggdroot/indentline'
 
-Plug 'tmhedberg/SimpylFold'
+Plug 'Konfekt/FastFold'
 
 " nerdtree
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " nerdtree git plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " 图标
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
 
 " leader f
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " easymotion
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
+
+Plug 'justinmk/vim-sneak'
+
 " insearch
 Plug 'haya14busa/incsearch.vim'
 " insearch-easymotion
-Plug 'haya14busa/incsearch-easymotion.vim'
+" Plug 'haya14busa/incsearch-easymotion.vim'
 " vim surround, cs"',从双引号改成单引号
 Plug 'tpope/vim-surround'
 
@@ -42,9 +45,6 @@ Plug 'luochen1990/rainbow'
 " undotree F5查看
 Plug 'mbbill/undotree'
 
-" gS/gJ来一句变等价的多句
-Plug 'AndrewRadev/splitjoin.vim'
-
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -55,10 +55,6 @@ Plug 'Chiel92/vim-autoformat'
 
 " gcc注释
 Plug 'tpope/vim-commentary'
-" git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter' " 提示修改
-Plug 'junegunn/gv.vim' " 查看提交记录
 
 " 光标多选
 Plug 'terryma/vim-multiple-cursors'
@@ -72,27 +68,28 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
 
 " 单词加下划线
-Plug 'itchyny/vim-cursorword'
+" Plug 'itchyny/vim-cursorword'
 
 " easylog
 Plug 'joeyZhouYicheng/vim-easylog'
 
+Plug 'terryma/vim-smooth-scroll'
+
+Plug 'terryma/vim-expand-region'
 
 " ------------ 语言插件 ------------
 " go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'AndrewRadev/splitjoin.vim' " gS来拆开，gJ来合并，每行后有逗号
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for':'go'}
 
 " python
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " markdown
-Plug 'godlygeek/tabular' " vim-markdown必要插件
-Plug 'plasticboy/vim-markdown'
-Plug 'suan/vim-instant-markdown'
-
-Plug 'mzlogin/vim-markdown-toc' " 目录
+Plug 'godlygeek/tabular', { 'for': 'marksdown'} " vim-markdown必要插件
+Plug 'plasticboy/vim-markdown', { 'for': 'marksdown'}
+Plug 'suan/vim-instant-markdown', { 'for': 'marksdown'}
+" 目录
+Plug 'mzlogin/vim-markdown-toc', { 'for': 'marksdown'}
 " 生成目录 :GenTocMarked
 " 更新目录 :UpdateToc
 
@@ -184,7 +181,7 @@ let g:AutoPairsFlyMode = 0
 inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>
 
 " incsearch-easymotion
-map / <Plug>(incsearch-easymotion-/)
+" map / <Plug>(incsearch-easymotion-/)
 
 
 " undotree
@@ -280,7 +277,7 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Remap for rename current word
+" Remcap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
@@ -311,6 +308,23 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+" easylog
+" let g:easy_log_configuration_map='<leader><leader>l'
+
+" smooth-scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" sneak
+let g:sneak#label = 1
+let g:sneak#s_next = 1
+
+noremap f <Plug>Sneak_f
+noremap F <Plug>Sneak_F
+
+map ' <Plug>Sneak_,
 
 " -----------------------------------
 " ---------- 语言插件配置 -----------
@@ -399,12 +413,6 @@ autocmd FileType python nmap <Leader>r :w<CR>:!python3 % <CR>
 
 
 " ================ 自定义 =================
-" 对vim折叠
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
-
 " 配置立刻生效
 autocmd! BufWritePost ~/.vimrc :source ~/.vimrc
 
@@ -426,7 +434,7 @@ set showcmd
 set encoding=utf-8
 set t_Co=256
 
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1         "vim会根据该设置识别文件编码
+set fileencodings=ucs-bom,utf-8,gb18030        "vim会根据该设置识别文件编码
 
 set fileformat=unix                    " 设置以unix的格式保存文件"
 set fileencoding=utf-8          " 在保存文件时，指定编码
@@ -441,10 +449,6 @@ set expandtab
 set softtabstop=2
 set smarttab
 
-" 折叠
-set foldmethod=indent " 基于缩进折叠
-set foldlevel=99
-set nofoldenable
 
 " 外观
 set number
@@ -503,9 +507,9 @@ nnoremap j gj
 nnoremap k gk
 
 let g:mapleader=','
-noremap <leader>so :w<cr>:so %<CR>
-noremap <leader>w :w<CR>
-noremap <leader>q :q<CR>
+nnoremap <leader>so :w<cr>:so %<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y
 nnoremap <leader><leader>p "0p
@@ -542,6 +546,16 @@ nnoremap ]e  :<c-u>execute 'move +'. v:count1<cr>
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
+" terminal
+nnoremap <leader><leader>t <c-w><c-v>:<c-u>terminal<cr>
+tnoremap <Esc> <C-\><C-n>
+tnoremap <c-h> <C-\><C-N><C-w>h
+tnoremap <c-j> <C-\><C-N><C-w>j
+tnoremap <c-k> <C-\><C-N><C-w>k
+tnoremap <c-l> <C-\><C-N><C-w>l
+
+autocmd BufWinEnter,WinEnter * if &buftype == 'terminal' | silent! normal i | endif
+
 " sudo写入，使用:w!!
 cnoremap w!! w !sudo tee % >/dev/null
 
@@ -559,6 +573,5 @@ else
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
   let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 endif
-
 
 

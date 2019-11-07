@@ -125,6 +125,7 @@ alias pts='protoc --plugin=protoc-gen-json-ts=./node_modules/protoc-gen-json-ts/
 alias psg='ps -a | grep'
 alias agg='alias | grep'
 alias bsh='cat ~/.bashrc'
+alias j='z'
 alias vim='nvim'
 alias vi='nvim'
 alias vzsh='nvim ~/.zshrc'
@@ -163,4 +164,3 @@ alias cp="cp -i"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
