@@ -1,0 +1,35 @@
+"Start X" = "-3.875";
+"Start Y" = "-1.263";
+"Width" = "7.75";
+"Tracking" = "3.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "The Jedi Consular";
+"Episode" = "Prologue";
+
+"Number Lines" = "20";
+"Line 1" = "Evil threatens to consume";
+"Line 2" = "the galaxy. The Sith Empire's";
+"Line 3" = "relentless assault destroyed";
+"Line 4" = "the Jedi Temple and drove the";
+"Line 5" = "Republic's defenders into exile";
+"Line Justify 6" = "left";
+"Line 6" = "during the last war.";
+"Line 7" = " ";
+"Line 8" = "A fragile peace has been";
+"Line 9" = "negotiated, and the Jedi have";
+"Line 10" = "returned to their long-abandoned";
+"Tracking 11" = "6.0";
+"Line 11" = "homeworld of TYTHON to";
+"Line 12" = "regroup and investigate their";
+"Line Justify 13" = "left";
+"Line 13" = "ancient origins.";
+"Line 14" = " ";
+"Line 15" = "Now, a wise young Padawan";
+"Line 16" = "travels to Tython's mountain";
+"Line 17" = "ruins on a perilous quest to";
+"Line 18" = "complete the Jedi trials and";
+"Line 19" = "master the mysteries of the";
+"Line Justify 20" = "left";
+"Line 20" = "Force....";

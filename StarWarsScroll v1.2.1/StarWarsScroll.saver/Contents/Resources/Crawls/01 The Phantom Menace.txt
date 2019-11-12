@@ -1,0 +1,34 @@
+"Start X" = "-3.875";
+"Start Y" = "-1.263";
+"Width" = "7.75";
+"Tracking" = "3.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "The Phantom Menace";
+"Episode" = "Episode I";
+
+"Number Lines" = "20";
+"Line 1" = "Turmoil has engulfed the";
+"Line 2" = "Galactic Republic. The taxation";
+"Line 3" = "of trade routes to outlying star";
+"Line Justify 4" = "left";
+"Line 4" = "systems is in dispute.";
+"Line 5" = " ";
+"Line 6" = "Hoping to resolve the matter";
+"Line 7" = "with a blockade of deadly";
+"Line 8" = "battleships, the greedy Trade";
+"Line 9" = "Federation has stopped all";
+"Line 10" = "shipping to the small planet";
+"Line Justify 11" = "left";
+"Line 11" = "of Naboo.";
+"Line 12" = " ";
+"Line 13" = "While the Congress of the";
+"Line 14" = "Republic endlessly debates";
+"Line 15" = "this alarming chain of events,";
+"Line 16" = "the Supreme Chancellor has";
+"Line 17" = "secretly dispatched two Jedi";
+"Line 18" = "Knights, the guardians of";
+"Line 19" = "peace and justice in the";
+"Line Justify 20" = "left";
+"Line 20" = "galaxy, to settle the conflict....";

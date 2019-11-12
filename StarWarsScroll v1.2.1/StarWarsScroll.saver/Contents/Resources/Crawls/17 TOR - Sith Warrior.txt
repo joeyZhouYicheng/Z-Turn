@@ -1,0 +1,34 @@
+"Start X" = "-3.875";
+"Start Y" = "-1.263";
+"Width" = "7.75";
+"Tracking" = "3.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "The Sith Warrior";
+"Episode" = "Prologue";
+
+"Number Lines" = "19";
+"Line 1" = "The SITH EMPIRE tightens its";
+"Tracking 2" = "8.0";
+"Line 2" = "grip on the galaxy. The";
+"Line 3" = "Galactic Republic and its Jedi";
+"Line 4" = "defenders lie weakened and";
+"Line 5" = "vulnerable after the Empire's";
+"Line Justify 6" = "left";
+"Line 6" = "successful military campaign.";
+"Line 7" = " ";
+"Line 8" = "With a fragile peace negotiated,";
+"Line 9" = "the Empire sends all potential";
+"Line 10" = "Sith to undergo cruel and";
+"Line 11" = "deadly trials at its Academy on";
+"Line Justify 12" = "left";
+"Line 12" = "the harsh planet KORRIBAN.";
+"Line 13" = " ";
+"Line 14" = "Today, one of the Empire's";
+"Line 15" = "most promising young warriors";
+"Line 16" = "has been secretly summoned";
+"Line 17" = "by an influential overseer to";
+"Line 18" = "face the dark side trials much";
+"Line Justify 19" = "left";
+"Line 19" = "sooner than expected....";

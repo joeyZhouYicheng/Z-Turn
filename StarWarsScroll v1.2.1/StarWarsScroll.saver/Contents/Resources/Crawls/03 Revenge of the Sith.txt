@@ -1,0 +1,37 @@
+"Start X" = "-3.875";
+"Start Y" = "-1.263";
+"Width" = "7.75";
+"Tracking" = "3.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "Revenge of the Sith";
+"Episode" = "Episode III";
+
+"Number Lines" = "19";
+"Line 1" = "War! The Republic is crumbling";
+"Line 2" = "under attacks by the ruthless";
+"Tracking 3" = "6.0";
+"Line 3" = "Sith Lord, Count Dooku.";
+"Line 4" = "There are heroes on both sides.";
+"Line Justify 5" = "left";
+"Line 5" = "Evil is everywhere.";
+"Line 6" = " ";
+"Tracking 7" = "6.0";
+"Line 7" = "In a stunning move, the";
+"Line 8" = "fiendish droid leader, General";
+"Line 9" = "Grievous, has swept into the";
+"Line 10" = "Republic capital and kidnapped";
+"Line 11" = "Chancellor Palpatine, leader of";
+"Line Justify 12" = "left";
+"Line 12" = "the Galactic Senate.";
+"Line 13" = " ";
+"Line 14" = "As the Separatist Droid Army";
+"Line 15" = "attempts to flee the besieged";
+"Tracking 16" = "6.0";
+"Line 16" = "capital with their valuable";
+"Line 17" = "hostage, two Jedi Knights lead a";
+"Line 18" = "desperate mission to rescue the";
+"Tracking 19" = "5.0";
+"Line Justify 19" = "left";
+"Line 19" = "captive Chancellor....";

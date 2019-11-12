@@ -12,12 +12,13 @@ Plug 'itchyny/lightline.vim'
 " 增加代码缩进线条
 Plug 'yggdroot/indentline'
 
-Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
+" Plug 'Konfekt/FastFold'
 
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " nerdtree git plugin
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
 " 图标
 Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
 
@@ -81,19 +82,22 @@ Plug 'terryma/vim-expand-region'
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for':'go'}
 
+" ts
+Plug 'leafgarland/typescript-vim', { 'for':'xml'}
+
 " python
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " markdown
-Plug 'godlygeek/tabular', { 'for': 'marksdown'} " vim-markdown必要插件
-Plug 'plasticboy/vim-markdown', { 'for': 'marksdown'}
-Plug 'suan/vim-instant-markdown', { 'for': 'marksdown'}
-" 目录
-Plug 'mzlogin/vim-markdown-toc', { 'for': 'marksdown'}
-" 生成目录 :GenTocMarked
-" 更新目录 :UpdateToc
+" Plug 'godlygeek/tabular', { 'for': 'marksdown'} " vim-markdown必要插件
+" Plug 'plasticboy/vim-markdown', { 'for': 'marksdown'}
+" Plug 'suan/vim-instant-markdown', { 'for': 'marksdown'}
+" " 目录
+" Plug 'mzlogin/vim-markdown-toc', { 'for': 'marksdown'}
+" " 生成目录 :GenTocMarked
+" " 更新目录 :UpdateToc
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Initialize plugin system
 call plug#end()
@@ -165,15 +169,19 @@ let g:webdevicons_enable_startify = 1
 let g:DevIconsDefaultFolderOpenSymbol = ''
 
 " easymotion
-nmap <leader>f <Plug>(easymotion-overwin-f2)
+" nmap <leader>f <Plug>(easymotion-overwin-f2)
 
 " multiple-cursors
 let g:multi_cursor_quit_key            = '<C-c>'
 let g:multi_cursor_select_all_key      = 'g<C-n>'
 let g:multi_cursor_start_key           = 'g<A-n>'
 
+" fastfold
+" let g:vimsyn_folding='af'
+" let g:sh_fold_enabled= 7
+
 " rainbow
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 
 " auto pairs
 let g:AutoPairsFlyMode = 0
@@ -205,6 +213,9 @@ let g:ale_fix_on_save=0
 " autoformat
 noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
+" let g:autoformat_autoindent = 0
+" let g:autoformat_retab = 0
+" let g:autoformat_remove_trailing_spaces = 0
 
 " leaderf
 let g:Lf_ShortcutF = '<C-P>'
@@ -263,16 +274,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -308,8 +309,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" easylog
-" let g:easy_log_configuration_map='<leader><leader>l'
 
 " smooth-scroll
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
@@ -319,35 +318,34 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " sneak
 let g:sneak#label = 1
-let g:sneak#s_next = 1
 
-noremap f <Plug>Sneak_f
-noremap F <Plug>Sneak_F
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
 
 map ' <Plug>Sneak_,
 
 " -----------------------------------
 " ---------- 语言插件配置 -----------
 " python
-let g:pymode = 1
-let g:pymode_warnings = 1
-let g:pymode_python = 'python3'  " 默认用python3
-let g:pymode_trim_whitespaces = 1
-let g:pymode_options_max_line_length = 80
-let g:pymode_rope_goto_definition_bind = "<C-]>"
+" let g:pymode = 1
+" let g:pymode_warnings = 1
+" let g:pymode_python = 'python3'  " 默认用python3
+" let g:pymode_trim_whitespaces = 1
+" let g:pymode_options_max_line_length = 80
+" let g:pymode_rope_goto_definition_bind = "<C-]>"
 
-let g:pymode_lint = 1
-let g:pymode_lint_on_write = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_sort = ['E', 'C', 'I']
-let g:pymode_lint_signs = 1
-let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
-let g:pymode_motion = 1
+" let g:pymode_lint = 1
+" let g:pymode_lint_on_write = 1
+" let g:pymode_lint_message = 1
+" let g:pymode_lint_sort = ['E', 'C', 'I']
+" let g:pymode_lint_signs = 1
+" let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
+" let g:pymode_motion = 1
 
-let g:pymode_run = 1
-let g:pymode_run_bind = '<leader>r'
+" let g:pymode_run = 1
+" let g:pymode_run_bind = '<leader>r'
 
-let g:pymode_rope_goto_definition_bind = '<C-c>g'
+" let g:pymode_rope_goto_definition_bind = '<C-c>g'
 
 " vim-go
 set autowrite
@@ -407,7 +405,7 @@ nnoremap <leader><leader>r <Plug>MarkdownPreviewToggle
 " js
 autocmd FileType javascript nmap <Leader>r :w<CR>:!node % <CR>
 
-" python
+" python3
 autocmd FileType python nmap <Leader>r :w<CR>:!python3 % <CR>
 "}}}
 
@@ -519,8 +517,8 @@ nnoremap <space> :
 
 noremap H ^
 noremap L $
-noremap K H
-noremap J L
+" noremap K H
+" noremap J L
 
 " 缩进后依然保持选中
 xnoremap <  <gv
@@ -573,5 +571,4 @@ else
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
   let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 endif
-
 

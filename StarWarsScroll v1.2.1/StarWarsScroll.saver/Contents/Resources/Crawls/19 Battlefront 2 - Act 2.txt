@@ -1,0 +1,36 @@
+"Start X" = "-3.875";
+"Start Y" = "-0.271";
+"Width" = "7.75";
+"Tracking" = "3.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "Rise of the Empire";
+"Episode" = " ";
+
+"Number Lines" = "21";
+"Line 1" = "The Galactic Republic has";
+"Line 2" = "fallen. Emperor Palpatine has";
+"Line 3" = "created a new Galactic Empire";
+"Line Justify 4" = "left";
+"Line 4" = "to rule in its place.";
+"Line 5" = " ";
+"Line 6" = "The Sith Lord Darth Vader,";
+"Line 7" = "has taken command of the elite";
+"Line 8" = "division of troopers known as";
+"Line 9" = "the 501st. Now known across";
+"Line 10" = "the galaxy as <Vader's Fist>,";
+"Line 11" = "the 501st strives to establish";
+"Line 12" = "order in the name of the";
+"Line Justify 13" = "left";
+"Line 13" = "Galactic Empire.";
+"Line 14" = " ";
+"Line 15" = "On the once-peaceful planet";
+"Line 16" = "of Naboo, the Emperor orders";
+"Tracking 17" = "8.0";
+"Line 17" = "his newly armored";
+"Line 18" = "stormtroopers to stifle the";
+"Line 19" = "seeds of rebellion in a";
+"Line 20" = "diplomatic manner befitting";
+"Line Justify 21" = "left";
+"Line 21" = "the new Empire....";

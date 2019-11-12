@@ -1,0 +1,34 @@
+"Start X" = "-3.6";
+"Start Y" = "-0.271";
+"Width" = "7.2";
+"Tracking" = "4.0";
+"Speed" = "0.35";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "Jedi Knight";
+"Episode" = " ";
+
+"Number Lines" = "18";
+"Tracking 1" = "6.0";
+"Line 1" = "Since the destruction of";
+"Line 2" = "the second DEATH STAR, the";
+"Line 3" = "Rebel Alliance has begun the";
+"Line 4" = "difficult process of building";
+"Line Justify 5" = "left";
+"Line 5" = "the New Republic.";
+"Line 6" = " ";
+"Line 7" = "Seizing the opportunity for";
+"Line 8" = "control of the galaxy, new";
+"Line 9" = "rival armies arise. The most";
+"Line 10" = "dangerous of these are the";
+"Tracking 11" = "6.0";
+"Line 11" = "DARK JEDI. Their leader,";
+"Line 12" = "JEREC, seeks the legendary";
+"Line Justify 13" = "left";
+"Line 13" = "VALLEY OF THE JEDI.";
+"Line 14" = " ";
+"Line 15" = "Within this lost battleground";
+"Line 16" = "he will find untold power to";
+"Line 17" = "destroy peace and justice in";
+"Line Justify 18" = "left";
+"Line 18" = "the galaxy . . . .";

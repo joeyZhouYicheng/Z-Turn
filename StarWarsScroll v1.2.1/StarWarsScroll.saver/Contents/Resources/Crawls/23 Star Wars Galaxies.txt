@@ -1,0 +1,33 @@
+"Start X" = "-3.7";
+"Start Y" = "-0.271";
+"Width" = "7.4";
+"Tracking" = "6.0";
+"Speed" = "0.37";
+"Color" = "0.95294117647059 0.77647058823529 0.20392156862745";
+
+"Title" = "An Empire Divided";
+"Episode" = "Star Wars Galaxies";
+
+"Number Lines" = "20";
+"Line 1" = "It is the height of the";
+"Line 2" = "Galactic Civil War.";
+"Line 3" = "Although the Rebel Alliance";
+"Line 4" = "has destroyed the dreaded";
+"Line 5" = "Death Star, the Emperor";
+"Line 6" = "still holds thousands of";
+"Line 7" = "systems in his grip.";
+"Line 8" = " ";
+"Line 9" = "Throughout the galaxy,";
+"Line 10" = "civil war rages. Innocents";
+"Line 11" = "and heroes alike are";
+"Line 12" = "swept into the conflict.";
+"Line 13" = "The fate of millions";
+"Line 14" = "shifts with every battle.";
+"Line 15" = " ";
+"Line 16" = "On a distant imperial";
+"Line 17" = "Space Station, a smaller";
+"Line 18" = "battle erupts over the fate";
+"Line 19" = "of a single being's destiny,";
+"Tracking 20" = "8.0";
+"Line Justify 20" = "left";
+"Line 20" = "yours....";
