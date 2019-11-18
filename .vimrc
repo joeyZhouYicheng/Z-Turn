@@ -6,14 +6,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'
 " 主题
 Plug 'morhetz/gruvbox'
+
 " 状态栏美化
 Plug 'itchyny/lightline.vim'
 
 " 增加代码缩进线条
 Plug 'yggdroot/indentline'
 
-Plug 'tmhedberg/SimpylFold'
-" Plug 'Konfekt/FastFold'
+Plug 'Konfekt/FastFold'
 
 " nerdtree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -33,7 +33,6 @@ Plug 'justinmk/vim-sneak'
 " insearch
 Plug 'haya14busa/incsearch.vim'
 " insearch-easymotion
-" Plug 'haya14busa/incsearch-easymotion.vim'
 " vim surround, cs"',从双引号改成单引号
 Plug 'tpope/vim-surround'
 
@@ -60,16 +59,8 @@ Plug 'tpope/vim-commentary'
 " 光标多选
 Plug 'terryma/vim-multiple-cursors'
 
-" 输入法
-" Plug 'ybian/smartim'
-" Plug 'lilydjwg/fcitx.vim'
-" Plug 'CodeFalling/fcitx-vim-osx'
-
 " auto pairs
 Plug 'jiangmiao/auto-pairs'
-
-" 单词加下划线
-" Plug 'itchyny/vim-cursorword'
 
 " easylog
 Plug 'joeyZhouYicheng/vim-easylog'
@@ -85,19 +76,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for':'go'}
 " ts
 Plug 'leafgarland/typescript-vim', { 'for':'xml'}
 
-" python
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-
-" markdown
-" Plug 'godlygeek/tabular', { 'for': 'marksdown'} " vim-markdown必要插件
-" Plug 'plasticboy/vim-markdown', { 'for': 'marksdown'}
-" Plug 'suan/vim-instant-markdown', { 'for': 'marksdown'}
-" " 目录
-" Plug 'mzlogin/vim-markdown-toc', { 'for': 'marksdown'}
-" " 生成目录 :GenTocMarked
-" " 更新目录 :UpdateToc
-
-" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Initialize plugin system
 call plug#end()
@@ -160,16 +138,10 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.git$', '\.DS_Store$']
 " 最后一个窗口为nerdtree的时候，关掉vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" adding to vim-airline's tabline
-let g:webdevicons_enable_airline_tabline = 1
-" adding to vim-airline's statusline
-let g:webdevicons_enable_airline_statusline = 1
 " adding to vim-startify screen
 let g:webdevicons_enable_startify = 1
 let g:DevIconsDefaultFolderOpenSymbol = ''
 
-" easymotion
-" nmap <leader>f <Plug>(easymotion-overwin-f2)
 
 " multiple-cursors
 let g:multi_cursor_quit_key            = '<C-c>'
@@ -177,26 +149,17 @@ let g:multi_cursor_select_all_key      = 'g<C-n>'
 let g:multi_cursor_start_key           = 'g<A-n>'
 
 " fastfold
-" let g:vimsyn_folding='af'
-" let g:sh_fold_enabled= 7
+let g:vimsyn_folding='af'
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
 
-" rainbow
-" let g:rainbow_active = 1
 
 " auto pairs
 let g:AutoPairsFlyMode = 0
-" let g:AutoPairsShortcutBackInsert = '<C-i>' " 写了会影响到tab键
 inoremap <buffer> <silent> <BS> <C-R>=AutoPairsDelete()<CR>
-
-" incsearch-easymotion
-" map / <Plug>(incsearch-easymotion-/)
-
 
 " undotree
 nnoremap <F5> :UndotreeToggle<cr>
-
-" gitgutter
-set updatetime=300 " 100 ms
 
 
 " linghtline
@@ -213,9 +176,6 @@ let g:ale_fix_on_save=0
 " autoformat
 noremap <F3> :Autoformat<CR>
 au BufWrite * :Autoformat
-" let g:autoformat_autoindent = 0
-" let g:autoformat_retab = 0
-" let g:autoformat_remove_trailing_spaces = 0
 
 " leaderf
 let g:Lf_ShortcutF = '<C-P>'
@@ -241,8 +201,6 @@ let g:webdevicons_enable_startify = 1
 " Force extra padding in NERDTree so that the filetype icons line up vertically
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
-" simplyfold
-let g:SimpylFold_docstring_preview=1
 
 " ------  coc  -------
 " Use a command like :verbose imap <tab> to make sure that your keymap has taken effect.
@@ -258,8 +216,6 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-" set complete-=i   " disable scanning included files
-" set complete-=t   " disable searching tags
 
 " Use <tab> to confirm completion
 inoremap <expr> <tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -384,7 +340,6 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 let g:rehash256 = 1
-" let g:molokai_original = 1 " 主题的设置，对比度高
 
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
@@ -414,13 +369,16 @@ autocmd FileType python nmap <Leader>r :w<CR>:!python3 % <CR>
 " 配置立刻生效
 autocmd! BufWritePost ~/.vimrc :source ~/.vimrc
 
+set updatetime=300 " 100 ms
+set lazyredraw
+set ttyfast
+
 set helplang=cn
 " language messages zh_CN.utf-8
 
 " 设置主题
 set background=dark
 colorscheme gruvbox
-" colorscheme molokai
 
 filetype off                  " reset
 filetype plugin indent on
@@ -492,6 +450,8 @@ set history=1000
 set nobackup
 set nowritebackup
 set noswapfile
+
+set foldmethod=manual
 
 " 按F2进入粘贴模式
 set pastetoggle=<F2>
