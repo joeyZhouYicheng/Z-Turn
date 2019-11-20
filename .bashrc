@@ -153,6 +153,7 @@ alias -s c=nvim
 alias -s java=nvim
 alias -s txt=nvim
 alias -s ts=vsc
+alias -s sh=bash
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
