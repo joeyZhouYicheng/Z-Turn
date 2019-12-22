@@ -25,14 +25,11 @@ Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
 " leader f
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
-" easymotion
-" Plug 'easymotion/vim-easymotion'
-
 Plug 'justinmk/vim-sneak'
 
 " insearch
 Plug 'haya14busa/incsearch.vim'
-" insearch-easymotion
+
 " vim surround, cs"',从双引号改成单引号
 Plug 'tpope/vim-surround'
 
@@ -75,6 +72,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' , 'for':'go'}
 
 " ts
 Plug 'leafgarland/typescript-vim', { 'for':'xml'}
+
+" 自动运行
+Plug 'skywind3000/asyncrun.vim'
 
 
 " Initialize plugin system
@@ -363,6 +363,17 @@ autocmd FileType javascript nmap <Leader>r :w<CR>:!node % <CR>
 " python3
 autocmd FileType python nmap <Leader>r :w<CR>:!python3 % <CR>
 "}}}
+
+
+" asyncrun
+" 自动打开 quickfix window ，高度为 6
+let g:asyncrun_open = 6
+
+" 任务结束时候响铃提醒
+let g:asyncrun_bell = 1
+
+" 设置 F10 打开/关闭 Quickfix 窗口
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 
 
 " ================ 自定义 =================
