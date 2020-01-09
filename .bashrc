@@ -1,11 +1,18 @@
-#### gopath
+# gopath
+export PATH="$PATH:$HOME/.rvm/bin"
 export GOPATH=$HOME/Work/go
+export GOROOT=/usr/local/Cellar/go/1.13.5/libexec
+# export GO111MODULE=auto
+export GOPROXY=https://goproxy.io,direct
+export GOBIN=$GOPATH/bin
+
 export FLUTTERPATH=~/flutter/flutter/bin
-export PATH=~/DB/mongodb-3.6.3/bin:$PATH:$GOPATH/bin:$FLUTTERPATH
+# export PATH=~/DB/mongodb-3.6.3/bin:$PATH:$GOPATH/bin:$FLUTTERPATH
 export CDNROOT=~/workspace/ezstatic
 export UATROOT=~/workspace/localezstatic
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
 alias szsh='source ~/.zshrc'
 alias al='alias'
 
@@ -163,6 +170,4 @@ alias rm="trash"
 alias cp="cp -i"
 # eval "$(pyenv init -)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
